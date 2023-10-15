@@ -5,6 +5,7 @@
 import java.text.DecimalFormat;
 import java.util.Arrays;
 import java.util.Random;
+import java.util.Scanner;
 
 // object point untuk merepresentasikan titik
 class Point {
@@ -38,10 +39,25 @@ class Result {
 public class L0122142_ClosestPair {
   public static void main(String[] args) {
     Logic logic = new Logic();
+    Scanner scanner = new Scanner(System.in);
     DecimalFormat decimalFormat = new DecimalFormat("#,###");
 
-    int pointsCount = 10;
-    int maxPoint = 10;
+    System.out.println("Program Closest Pair\n");
+    System.out.println("Titik-titik koordinat akan di-generate secara random\n");
+
+    // meminta user untuk memasukkan jumlah titik yang akan
+    // di generate dan nilai titik maksimal
+    System.out.println("Masukkan jumlah titik");
+    System.out.print("> ");
+    int pointsCount = scanner.nextInt();
+    scanner.nextLine();
+
+    System.out.println("Masukkan titik maksimal [0-max)");
+    System.out.print("> ");
+    int maxPoint = scanner.nextInt();
+    scanner.nextLine();
+
+    scanner.close();
 
     Point[] points = new Point[pointsCount];
 
