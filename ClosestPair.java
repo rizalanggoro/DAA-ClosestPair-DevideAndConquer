@@ -1,5 +1,6 @@
-// Nama : Rizal Dwi Anggoro
-// NIM  : L0122142
+// Nama   : Rizal Dwi Anggoro
+// NIM    : L0122142
+// Github : https://github.com/rizalanggoro/DAA-ClosestPair-DevideAndConquer
 
 import java.text.DecimalFormat;
 import java.util.Arrays;
@@ -96,12 +97,15 @@ public class ClosestPair {
 
 class Logic {
   public double calculateDistance(Point point1, Point point2) {
+    // fungsi untuk menghitung jarak antara dua titik
     double diffX = Math.abs(point2.x - point1.x);
     double diffY = Math.abs(point2.y - point1.y);
     return Math.sqrt(Math.pow(diffX, 2) + Math.pow(diffY, 2));
   }
 
   public Result bruteForcePoints(Point[] points) {
+    // fungsi untuk mencari jarak titik terdekat
+    // menggunakan algoritma brute force
     double distance = Double.MAX_VALUE;
     Point point1 = null, point2 = null;
     for (int a = 0; a < points.length - 1; a++) {
