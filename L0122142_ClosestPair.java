@@ -6,6 +6,7 @@ import java.text.DecimalFormat;
 import java.util.Arrays;
 import java.util.Random;
 
+// object point untuk merepresentasikan titik
 class Point {
   int x, y;
 
@@ -20,6 +21,9 @@ class Point {
   }
 }
 
+// object result untuk merepresentasikan
+// hasil perhitungan, dimana terdapat:
+// jarak, titik 1, dan titik 2
 class Result {
   double distance;
   Point point1, point2;
@@ -31,7 +35,7 @@ class Result {
   }
 }
 
-public class ClosestPair {
+public class L0122142_ClosestPair {
   public static void main(String[] args) {
     Logic logic = new Logic();
     DecimalFormat decimalFormat = new DecimalFormat("#,###");
@@ -173,7 +177,6 @@ class Logic {
 
             if (distance < resultMin.distance)
               resultMin = new Result(distance, point1, point2);
-
           }
         }
       }
